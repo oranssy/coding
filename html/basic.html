@@ -76,23 +76,47 @@
         .article p {
             margin-bottom: 10px;
         }
-        .article .table {
+        .article .table01 {
             width: 100%;
             border-spacing: 0;
             border-collapse: collapse;
             margin-bottom: 10px;
         }
-        .article .table tr th {
+        .article .table01 tr th {
             border: 1px solid #dedede;
             padding: 10px;
             font-weight: normal;
             background-color: #f5f5f5;
         }
-        .article .table tr td {
+        .article .table01 tr td {
             border: 1px solid #dedede;
             padding: 10px;
         }
-        .article .table .center {
+        .article .table01 .center {
+            text-align: center;
+        }
+        article .box {
+            background-color: #f5f5f5;
+            padding: 10px;
+        }
+
+        .article .table02 {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        .article .table02 tr th {
+            border: 1px solid #dedede;
+            padding: 10px;
+            font-weight: normal;
+            background-color: #f5f5f5;
+        }
+        .article .table02 tr td {
+            border: 1px solid #dedede;
+            padding: 10px;
+        }
+        .article .table02 .center {
             text-align: center;
         }
         article .box {
@@ -135,17 +159,46 @@
             <ul>
                 <li><a href="basic.html">기본 문서</a></li>
                 <li><a href="markup.html">기본 규칙</a></li>
-                <li><a href="#">W3C validato</a></li>
-                <li><a href="#">시멘틱 마그업</a></li>
-                <li><a href="#">블록/인라인 요소</a></li>
+                <li><a href="w3c.html">W3C validato</a></li>
+                <li><a href="semantic.html">시멘틱 마크업</a></li>
+                <li><a href="blockinline.html">블록/인라인 요소</a></li>
             </ul>
         </nav>
+
         <article class="article">
             <h2>HTML 기본 문서</h2>
+            <table class="table01">
+                <thead>
+                    <tr>
+                        <th>용어</th>
+                        <th>의미</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td class="center">태그 (tag)</td>
+                            <td>명령어의 형태가 각 괄호 &lt; &gt; 로 되어있는 것을 말합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="center">요소 (element)</td>
+                            <td>시작 태그에서 종료 태그까지의 한 묶음을 하나의 요소라고 합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="center">마크업(markup)</td>
+                            <td>요소들로 코딩한 것을 의미합니다.</td>
+                        </tr>
+                    </tbody>
+                </thead>
+            </table>
+            <!-- //table01 -->
+
             <p>
-                HTML 기본 문서의 &lt;html&gt; 요소는 head 요소와 body 요소로 구성되어 있으며, head 요소 안에는 meta, title, link, syle, script 등의 요소들이 올 수 있습니다.
+                HTML 기본 문서는 DOCTYPE을 선언하며 시작해야 합니다.<br>
+                DOCTYPE 선언은 작성된 문서의 형식을 브라우저에게 알려줌으로써,<br>
+                태크와 요소의 지원 여부나 속성처리를 기준으로 브라우저가 HTML 문서의 내용을 올바르게 표시하도록 돕습니다.<br><br>
+                기본 문서의 &lt;html&gt; 요소는 &lt;head&gt; 요소와 &lt;body&gt; 요소로 구성되어 있으며,<br>
+                &lt;head&gt; 요소 안에는 &lt;meta&gt;, &lt;title&gt;, &lt;link&gt;, &lt;style&gt;, &lt;script&gt; 등의 요소들이 올 수 있습니다.
             </p>
-            <table class="table">
+            <table class="table02">
                 <thead>
                     <tr>
                         <th>요소명</th>
@@ -171,16 +224,39 @@
                     </tr>
                     <tr>
                         <td class="center">&lt;script&gt;</td>
-                        <td>자바스크립트를 HTML문서 내부에서 정의하거나 외부에서 자바스크립트 파일을 불러올 때 사용합니다.</td>
+                        <td>자바스크립트를 HTML 문서 내부에서 정의하거나 외부에서 자바스크립트 파일을 불러올 때 사용합니다.</td>
                     </tr>
                 </tbody>
             </table>
-            <p class="box">
-                &lt;metaname = "viewport"/&gt;
+            <!-- //table02 -->
+
+            <br>
+            <p>
+                속성(attribute) : 태그 내부에 부가적인 설정값을 선언하는 것을 의미합니다.<br>
+                lang 속성은 HTML 문서에서 사용하는 언어를 설정해주며,<br>
+                lang 속성의 언어 설정에 따라 시각 장애인들이 사용하는 스크린 리더(음성 낭독 프로그램)에서 다르게 읽어줍니다.
             </p>
-            <p>뷰포트라고 하면 문서를 조절해 주는 속성입니다. link, style, script 등의 요소들이 올 수 있습니다.</p>
             <p class="box">
-                &lt;metaname = "viewport"/&gt;
+                &lt;html lang="ko"&gt; 설정 : 일, 이, 삼 <br>
+                &lt;html lang="en"&gt; 설정 : 원, 투, 쓰리
+            </p>
+            <p>
+                주 언어 설정 이후 특정 부분에서 언어를 바꿔주어야 한다면 해당하는 부분에만 lang 속성을 다른 언어로 지정합니다.
+            </p>
+            <p class="box">
+                &lt;i lang="de"&gt;Ich liebe dich&lt;/i&gt;
+            </p>
+            <p>
+                문자 인코딩 (charset) 방식 : meta 태그의 charset 속성의 값 UTF-8 <br>
+                UTF-8의 경우, 거의 대부분의 문자를 처리할 수 있기 때문에, HTML5의 문자 인코딩 방식으로 사용합니다.
+            </p>
+            <p class="box">
+                &lt;meta charset="UTF-8"&gt; <br>
+                &lt;meta name = "viewport"/&gt;
+            </p>
+            <p>
+                "viewport"는 모바일 해상도에 맞게 HTML 문서를 조절해 주는 속성입니다.
+                link, style, script 등의 요소들이 올 수 있습니다.
             </p>
         </article>
     </section>
