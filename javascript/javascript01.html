@@ -31,6 +31,7 @@
             <ul class="study">
                 <li><a href="study/basic.html">기본 규칙</a></li>
                 <li><a href="study/operator.html">연산자</a></li>
+                <li><a href="study/for.html">for문</a></li>
             </ul>
         </nav>
     </header>
@@ -58,8 +59,6 @@
                 <li><a href="#sample17">17.배열 : 데이터 저장 (키와 값) : 표현방법8</a></li>
             </ul>
         </div>
-
-
         <div class="main_sample">
             <div id="sample01" class="sample">
                 <h3>01. 변수 : 데이터 저장</h3>
@@ -104,9 +103,9 @@
     y = 400;
     z = "jquery";
 
-    document.write(x)
-    document.write(y)
-    document.write(z)
+    document.write(x);
+    document.write(y);
+    document.write(z);
 }
 </code></pre>
                 </div>
@@ -134,9 +133,9 @@
     y += 400;
     z += "jquery";
 
-    document.write(x)
-    document.write(y)
-    document.write(z)
+    document.write(x);
+    document.write(y);
+    document.write(z);
 }
 </code></pre>
                 </div>
@@ -489,7 +488,7 @@
     document.write(obj.b[0]);
     document.write(obj.b[1]);
     document.write(obj.c.x);
-    document.write(obj.c.x);
+    document.write(obj.c.y);
     document.write(obj.d);
 }
 </code></pre>
@@ -509,7 +508,17 @@
                     객체 : 객체 속에 변수
                 </p>
                 <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">{
+    const a = 100;
+    const b = 200;
+    const c = "javascript";
+
+    const obj = {a, b, c};
+
+    document.write(obj.a);
+    document.write(obj.b);
+    document.write(obj.c);
+}
 </code></pre>
                 </div>
                 <div class="result">
@@ -519,7 +528,57 @@
                     </details>
                 </div>
             </div>
-            <!-- //sample15 -->
+            <!-- //sample16 -->
+
+            <div id="sample17" class="sample">
+                <h3>17. 배열 : 데이터 저장 (키와 값) : 표현방법8</h3>
+                <p>
+                    객체 : 객체 속에 변수
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const obj = {
+        a : 100,
+        b : [200, 300],
+        c : {x:400, y:500},
+        d : "javascript",
+        e : function(){
+            document.write("자바스크립트가 실행되었습니다.");
+        },
+        f : function(){
+            document.write( obj.d + "가 실행되었습니다.");
+        },
+        g : function(){
+            document.write( this.d + "가 실행되었습니다.");
+        }
+    }
+
+    document.write(obj.a);
+    document.write(obj.b[0]);
+    document.write(obj.b[1]);
+    document.write(obj.b);
+    document.write(obj.c.x);
+    document.write(obj.c.y);
+    document.write(obj.c);
+    document.write(obj.d);
+    obj.e();
+    obj.f();
+    obj.g();
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample17_result">
+                            100<br>200<br>300<br>200,300<br>400<br>500<br>
+                            [object,object]<br>javascript<br>자바스크립트가 실행되었습니다.<br>
+                            javascript가 실행되었습니다.<br>javascript가 실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample17 -->
 
         </div>
     </main>
@@ -660,6 +719,10 @@
             arr[1] = 200;
             arr[2] = "javascript";
 
+            // document.write(arr[0]);
+            // document.write(arr[1]);
+            // document.write(arr[2]);
+
             document.querySelector(".sample08_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
         }
 
@@ -771,9 +834,12 @@
 
             const obj = {a, b, c};
 
-            document.write(obj.a);
-            document.write(obj.b);
-            document.write(obj.c);
+            // document.write(obj.a);
+            // document.write(obj.b);
+            // document.write(obj.c);
+
+            document.querySelector(".sample16_result").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.c;
+
         }
 
         // 17 객체 : 객체 속에 함수
@@ -794,14 +860,14 @@
                 }
             }
 
-            document.write(obj.a);
-            document.write(obj.b[0]);
-            document.write(obj.b[1]);
-            document.write(obj.b);
-            document.write(obj.c.x);
-            document.write(obj.c.y);
-            document.write(obj.c);
-            document.write(obj.d);
+            // document.write(obj.a);
+            // document.write(obj.b[0]);
+            // document.write(obj.b[1]);
+            // document.write(obj.b);
+            // document.write(obj.c.x);
+            // document.write(obj.c.y);
+            // document.write(obj.c);
+            // document.write(obj.d);
             obj.e();
             obj.f();
             obj.g();
