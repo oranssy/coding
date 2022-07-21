@@ -68,12 +68,20 @@
 
         <div class="main_sample">
             <div id="sample01" class="sample">
-                <h3></h3>
+                <h3>01. 변수 : 데이터 불러오기</h3>
                 <p>
-                    
+                                
                 </p>
                 <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">{
+    let x = 100,
+        y = 200,
+        z = "javascript";
+
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
 </code></pre>
                 </div>
                 <div class="result">
@@ -83,8 +91,104 @@
                     </details>
                 </div>
             </div>
-            <!-- //sample01 -->
+                        <!-- //sample01 -->
 
+            <div id="sample02" class="sample">
+                <h3>02. 상수 : 데이터 불러오기</h3>
+                <p>
+                    
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const x = 100,
+          y = 200,
+          z = "javascript";
+
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample02_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample02 -->
+
+            <div id="sample03" class="sample">
+                <h3>03. 배열 : 데이터 불러오기</h3>
+                <p>
+                    
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const arr = [100, 200, "javascript"];
+
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample03_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample03 -->
+
+            <div id="sample04" class="sample">
+                <h3>04. 배열 : 데이터 불러오기</h3>
+                <p>
+                    
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const arr = [100, 200, ["javascript", "jquery"]];
+
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2][0]);
+    document.write(arr[2][1]);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample04_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample04 -->
+
+            <div id="sample05" class="sample">
+                <h3>05. 배열 : 데이터 불러오기</h3>
+                <p>
+                    
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const arr = [100, 200, "javascript"];
+
+    document.write(arr.length)
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample05_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample05 -->
         </div>
     </main>
     <!-- //main -->
