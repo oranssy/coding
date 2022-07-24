@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃02_02</title>
+    <title>레이아웃02_00</title>
 
     <style>
         * {
@@ -19,63 +19,58 @@
             margin: 0 auto;
         }
         #header {
+            width: 1200px;
             height: 100px;
             background-color: #C8E6C9;
         }
         #nav {
+            width: 1200px;
             height: 100px;
             background-color: #A5D6A7;
         }
         #main {
-            display: flex;
+            width: 1200px;
+            overflow: hidden;
         }
         #aside {
-            width: 25%;
+            width: 300px;
             height: 780px;
             background-color: #81C784;
+            float: left;
         }
         #section {
-            width: 50%;
+            width: 600px;
             height: 780px;
             background-color: #66BB6A;
+            float: left;
         }
         #article {
-            width: 25%;
+            width: 300px;
             height: 780px;
             background-color: #4CAF50;
+            float: left;
         }
         #footer {
+            width: 1200px;
             height: 100px;
             background-color: #43A047;
         }
-
-        /* 미디어쿼리 */
-        @media (max-width: 1300px){
-            
-        }
-        @media (max-width: 768px){
-            
-        }
-        @media (max-width: 480px){
-            
-        }
-    
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header"></header>
-        <nav id="nav"></nav>
-        <main id="main">
-            <aside id="aside"></aside>
-            <section id="section"></section>
-            <article id="article"></article>
-        </main>
-        <footer id="footer"></footer>
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="main">
+            <div id="aside"></div>
+            <div id="section"></div>
+            <div id="article"></div>
+        </div>
+        <div id="footer"></div>
     </div>
     
     <!-- 
-        layout02_02 : flex 방식 레이아웃
+        layout02_00 : float 방식 레이아웃
      -->
 
 </body>

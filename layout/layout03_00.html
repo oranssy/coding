@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃03_02</title>
+    <title>레이아웃03_00</title>
 
     <style>
         * {
@@ -19,62 +19,67 @@
             margin: 0 auto;
         }
         #header {
+            width: 1200px;
             height: 100px;
             background-color: #B3E5FC;
         }
         #nav {
+            width: 1200px;
             height: 100px;
             background-color: #81D4FA;
         }
         #main {
-            display: flex;
-            flex-wrap: wrap;   /*  자식 요소의 크기에 맞춰서 설정 */
-            flex-direction: column;  /* flex의 방향을 설정 */
-            height: 780px;
+            width: 1200px;
+            /* overflow: hidden; 원래의 기능을 왜곡해서 사용하는 거라 벗어난 부분을 보여주는 단점이 있음*/
         }
         #aside {
-            width: 30%;
+            width: 300px;
             height: 780px;
             background-color: #4FC3F7;
+            float: left;
         }
         #article1 {
-            width: 70%;
+            width: 900px;
             height: 260px;
             background-color: #29B6F6;
+            float: left;
         }
         #article2 {
-            width: 70%;
+            width: 900px;
             height: 260px;
             background-color: #03A9F4;
+            float: left;
         }
         #article3 {
-            width: 70%;
+            width: 900px;
             height: 260px;
             background-color: #039BE5;
+            float: left;
         }
         #footer {
+            width: 1200px;
             height: 100px;
             background-color: #0288D1;
+            /* clear: both; 구조가 복잡해지면 왜 깨졌는지 모를 때가 있어서 사용하지 않음 */
         }
 
-        /* 미디어쿼리 */
-        @media (max-width: 1300px){
-            
+        /* clearfix 제일 안정적 */
+        .clearfix::before,
+        .clearfix::after {   /* height 값이 0이 되므로 공간을 만들어줘야함. 가상으로 요소를 주는 것. */
+            content: '';   /* HTML로만 글자를 주는 것이 아니라 CSS에서도 가상 요소를 만들어 글자를 넣을 수 있음 */
+            display: block;  /* 박스화 시키기 */
+            line-height: 0;  /* line-heigh가 있으면 공간을 차지하게 되기 때문 */
         }
-        @media (max-width: 768px){
-            
+        .clearfix::after {
+            clear: both;
         }
-        @media (max-width: 480px){
-            
-        }
-
     </style>
 </head>
 <body>
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="main">
+        <div id="main" class="clearfix">
             <div id="aside"></div>
             <div id="article1"></div>
             <div id="article2"></div>
@@ -84,7 +89,7 @@
     </div>
     
     <!-- 
-        layout03_02 : flex 방식 레이아웃
+        layout03_00 : float 방식 레이아웃
      -->
 
 </body>

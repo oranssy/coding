@@ -1,85 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃01_01</title>
-    <!-- 
-        foalt
-        flex
-        grid
-     -->
+    <title>레이아웃01_02</title>
+
     <style>
         * {
             margin: 0;
+            padding: 0;
         }
         body {
             background-color: #FFF3E0;
         }
         #wrap {
-            display: grid;
             width: 1200px;
             margin: 0 auto;
-            grid-template-areas: 
-            "header header"
-            "nav nav"
-            "aside section"
-            "footer footer";
-            grid-template-columns: 30% 70% ;
-            grid-auto-rows: 100px 100px 780px 100px;
+            display: flex;
+            flex-wrap: wrap;
         }
         #header {
-            grid-area: header;
+            width: 100%;
+            height: 100px;
             background-color: #FFE0B2;
         }
         #nav {
-            grid-area: nav;
+            width: 100%;
+            height: 100px;
             background-color: #FFCC80;
         }
         #aside {
-            grid-area: aside;
+            width: 30%;
+            height: 780px;
             background-color: #FFB74D;
         }
         #section {
-            grid-area: section;
+            width: 70%;
+            height: 780px;
             background-color: #FFA726;
         }
         #footer {
-            grid-area: footer;
+            width: 100%;
+            height: 100px;
             background-color: #FF9800;
         }
-        @media(max-width: 1220px){
-            #wrap {
-                width: 96%;
-            }
+        
+        /* 미디어쿼리 */
+        /* @media screen (max-width: 0px) and (max-width: 1200px) */
+        @media (max-width: 1300px){
+            
         }
-        @media(max-width: 768px){
-            #wrap {
-                width: 100%;
-                    }
+        @media (max-width: 768px){
+            
         }
-        @media(max-width: 480px){
-            #wrap {
-                grid-template-areas: 
-                "header"
-                "nav"
-                "aside"
-                "section"
-                "footer";
-                grid-template-columns: 100% ;
-                grid-auto-rows: 100px 100px 300px 480px 100px;
-            }
+        @media (max-width: 480px){
+            
         }
     </style>
 </head>
 <body>
-    <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="aside"></div>
-        <div id="section"></div>
-        <div id="footer"></div>
+    <div id="wrap"> <!--// 기본태그를 시멘틱 태그로 바꿔주기 (이름 정해서 의미부여) -->
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <section id="section"></section>
+        <footer id="footer"></footer>
     </div>
+        
+    <!-- 
+        layout01_02 : flex 방식 레이아웃
+     -->
+
 </body>
 </html>

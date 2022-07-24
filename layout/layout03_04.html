@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃03_02</title>
+    <title>레이아웃03_04</title>
 
     <style>
         * {
@@ -27,30 +27,29 @@
             background-color: #81D4FA;
         }
         #main {
-            display: flex;
-            flex-wrap: wrap;   /*  자식 요소의 크기에 맞춰서 설정 */
-            flex-direction: column;  /* flex의 방향을 설정 */
-            height: 780px;
+            display: grid;
+            grid-template-areas: 
+                "aside article1 article1"
+                "aside article2 article2"
+                "aside article3 article3";
+                grid-template-columns: 300px 900px;
+                grid-template-rows: 260px 260px 260px;
         }
         #aside {
-            width: 30%;
-            height: 780px;
             background-color: #4FC3F7;
+            grid-area: aside;
         }
         #article1 {
-            width: 70%;
-            height: 260px;
             background-color: #29B6F6;
+            grid-area: article1;
         }
         #article2 {
-            width: 70%;
-            height: 260px;
             background-color: #03A9F4;
+            grid-area: article2;
         }
         #article3 {
-            width: 70%;
-            height: 260px;
             background-color: #039BE5;
+            grid-area: article3;
         }
         #footer {
             height: 100px;
@@ -84,7 +83,7 @@
     </div>
     
     <!-- 
-        layout03_02 : flex 방식 레이아웃
+        layout03_04 : grid 방식 레이아웃
      -->
 
 </body>
