@@ -11,7 +11,7 @@
 </head>
 <body>
     <header id="header">
-        <h1><a href="../index.html">Javascript</a></h1>
+        <h1><a href="../index.html">Layout</a></h1>
         <nav class="header_nav">
             <ul>
                 <li><a href="../javascript01.html">데이터 저장하기</a></li>
@@ -42,37 +42,28 @@
 
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">기본 규칙</h2>
+            <h2 class="t_tit">레이아웃이란?</h2>
             <p class="t_desc">
-                자바스크립트를 다루기 위해서는 기초적인 특징과 기본 문법이 있습니다.
-                가장 기본이므로 이 부분을 숙지하고 자바스크립트를 <i>공부</i>합시다.
+                레이아웃(Layout, 배치)은 디자인에서 각 구성요소를 제한된 공간 안에 효과적으로 배열하는 일을 의미합니다.
+                레이아웃은 활동 또는 앱 위젯의 UI와 같은 사용자 인터페이스의 시각적 구조를 정의합니다.
             </p>
 
             <hr>
 
-            <h3 class="t_tit2">자바스크립트란?</h3>
+            <h3 class="t_tit2">레이아웃의 기본</h3>
             <p class="t_desc">
-                JavaScript는 웹 페이지에서 복잡한 기능을 구현할 수 있도록 하는 스크립팅 <i>프로그래밍 언어</i>입니다. 
-                HTML은 정적인 레이아웃을 표현한다면, 자바스크립트는 동적인 기능을 표현합니다.
+                &lt;div&gt; 박스 : block 구조
             </p>
-            <p class="t_desc2">
-                자바스크립트는 1995년 넷스케이프 커뮤니케이션의 브렌던 아이크가 개발하였스며 Netscape Navigsator2.0에 구현되었습니다. 
-                1996년에는 마이크로소프트사의 Internet Explorer3.0 탑재되었으며 java 애플릿으로 구현된 웹 브라우저의 지지부진한 보급과 맞물려 빠르게 보급되었습니다. 1997년부터 ESMAScript를 따르는 표준화 작업을 통해 현재는 모든 브라우저에서 지원됩니다.
-            </p>
-            <h3 class="t_tit2">자바스크립트 기본 규칙</h3>
-            <h4 class="t_tit3">01. 세미콜론(;)</h4>
+            <h4 class="t_tit3">01. float 활용</h4>
             <p class="t_desc">
-                하나의 실행문이 끝나면 마지막에 세미콜론(;)을 붙여 줍니다. 
-                세미콜론(;)을 붙여 주지 않아도 상관은 없습니다.
+                float는 '둥둥 띄우다'라는 뜻이며, 글씨와 이미지를 정렬하는 기능을 합니다.
+                float의 기능을 레이아웃에 활용할 수 있으나, 약간의 버그가 발생합니다. 
             </p>
-            <div class="t_box">
-                var num = 5<i>;</i> <br>
-                document.write()
-            </div>
-            <h4 class="t_tit3">02. 대소문자</h4>
+            
+            <h4 class="t_tit3">02. flex 활용</h4>
             <p class="t_desc">
-                자바스크립트는 명령어는 <i>대소문자</i>를 구별합니다.
-                console과 Console은 각각 다른 문자열로 처리됩니다.
+                flex는 레이아웃을 배치하는 기능이며, 가로 방향으로 배치됩니다. 
+                
             </p>
             <h4 class="t_tit3">03. 들여쓰기</h4>
             <p class="t_desc">
@@ -127,30 +118,6 @@
                 2. 스크립트 태그에 사용하는방법 
                 3. 태그에 직접 기술하는 방법 등이 있습니다.
             </p>
-
-            <div class="t_code">
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Javasript&lt;/title&gt;
-
-    &lt;!-- 1. 외부 파일로 로드하는 방법 --&gt;
-    &lt;script type="text/Javasript" src="js/script.js"&gt;&lt;/script&gt;
-
-    &lt;!-- 2. script 태그 사이에 기술하는 방법 --&gt;
-    &lt;script&gt;
-        document.write("Javasript");
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;!-- 3. 태그에 직접 기술하는 방법 --&gt;
-    &lt;a href="#" onclick="alert('Javasript')"&gt;&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-            </div>
 
         </div>
     </main>
