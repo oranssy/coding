@@ -93,8 +93,7 @@ for( let i=1; i&lt;=100; i++){
                     <div class="sample01_result"></div>
                 </details>
             </div>
-        </div>
-        <!-- //sample01 -->
+            <!-- //sample01 -->
 
             <h3 class="t_tit2">1부터 100까지 출력하기 (5의 배수, 7의 배수)</h3>
             <p class="t_desc">각각 5와 7로 나눴을 때 나머지가 0인 숫자를 찾고, 출력값의 숫자 색깔을 설정합니다.</p>
@@ -116,8 +115,7 @@ for( let i=1; i&lt;=100; i++){
                     <div class="sample02_result"></div>
                 </details>
             </div>
-        </div>
-        <!-- //sample02 -->
+            <!-- //sample02 -->
 
             <h3 class="t_tit2">1~100까지 출력하기</h3>
             <p class="t_desc">출력값의 색깔을 구분해봅니다.</p>
@@ -138,14 +136,15 @@ for( let i=1; i&lt;=100; i++){
                     <div class="sample03_result"></div>
                 </details>
             </div>
-        </div>
-        <!-- //sample03 -->
+            <!-- //sample03 -->
 
-        <h3 class="t_tit2">1~100까지 출력하기</h3>
+            <h3 class="t_tit2">1~100까지 출력하기</h3>
             <p class="t_desc">조건부 연산자를 이용해봅니다.</p>
             <div class="t_code">
 <pre><code>
-
+for( let i=1; i&lt;=100; i++){
+    if ( i % 2 == 0 ) ? document.write("<span style='color: red'>"+i+"</span>") : document.write("<span style='color: blue'>"+i+"</span>");
+}
 </code></pre>
             </div>
             <div class="result">
@@ -153,9 +152,8 @@ for( let i=1; i&lt;=100; i++){
                     <summary>결과 보기</summary>
                     <div class="sample04_result"></div>
                 </details>
-            </div>
-        </div>
-        <!-- //sample04 -->
+            </div>            
+            <!-- //sample04 -->
 
             <h3 class="t_tit2">구구단 출력하기</h3>
             <p class="t_desc">i의 값은 같은 값이 9번 반복되고 j의 값은 1~9 순차적으로 출력</p>
@@ -175,8 +173,7 @@ for( let i=1; i&lt;=100; i++){
                     <div class="sample05_result"></div>
                 </details>
             </div>
-        </div>
-        <!-- //sample05 -->
+            <!-- //sample05 -->
 
             <h3 class="t_tit2">for문을 이용해서 테이블 출력하기</h3>
             <p class="t_desc">중첩 for문을 이용해서 테이블을 만들 수 있습니다.</p>
@@ -205,6 +202,7 @@ for( let i=1; i&lt;=100; i++){
                     <div class="result06"></div>
                 </details>
                 <!-- //sample06 -->
+
                 <style>
                     .testTable tr td {
                         border: 1px solid #000;
@@ -226,7 +224,7 @@ for( let i=1; i&lt;=100; i++){
                         table += "</table>";
 
                     document.querySelector(".result06").innerHTML = table;
-                </script>
+                </script>   
 
             <h3 class="t_tit2">if 문 안의 if문</h3>
             <p class="t_desc">if문은 if문 안에 또 다른 if문을 중첩하여 사용할 수 있습니다.</p>
@@ -263,7 +261,7 @@ for( let i=1; i&lt;=100; i++){
 &lt;/html&gt;
 </code></pre>
             </div>
-            <div class="t_result">
+            <div class="t_result"></div>
             <!-- //예제 01 -->    
 
             <h3 class="t_tit2">switch문의 형식</h3>
@@ -301,9 +299,8 @@ for( let i=1; i&lt;=100; i++){
     &lt;/html&gt;
 </code></pre>
             </div>
-            <div class="t_result">
-            <!-- //예제 02 -->        
-
+            <div class="t_result"></div>
+            <!-- //예제 02 -->
             </div>
         </div>
     </main>
