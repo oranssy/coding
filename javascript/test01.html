@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 01. 선언적 함수
+        {
+            function func (){
+                document.write("실행1");
+            }
+            func();
+        }
+
+        // 02. 익명 함수
+        {
+            
+        }
+
+        // 03. 매개변수 함수
+        {
+            function func (str){
+                let (str) = document.write();
+            }
+            func ("실행3");
+        }
+
+        // 04. 리턴값 함수
+        {
+            function func (){
+                let str = "실행4"
+                return str;
+            }
+
+            document.write(func());
+        }
+
+        // 05. 화살표 함수 (선언적)
+        {
+            func = () => document.write("실행5");
+
+            func();
+        }
+
+        // 06. 화살표 함수 (익명)
+        {
+
+        }
+
+        // 07. 화살표 함수 (매개변수)
+        {
+            func = str => document.write();
+
+            func("실행7");
+        }
+
+        // 08. 화살표 함수 (리턴값)
+    </script>
+</body>
+</html>
