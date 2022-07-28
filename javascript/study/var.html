@@ -43,36 +43,103 @@
 
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">표준 웹 기술의 3가지</h2>
+            <h2 class="t_tit">지역 변수와 전역 변수</h2>
             <p class="t_desc">
-                표준 웹 기술은 크게 3가지로 나눌 수 있습니다. <br>
-                HTML 은 웹 콘텐츠의 구조를 짜고 의미를 부여하는 마크업 언어를 말하며, 정보가 어느 부분에 어떤 데이터로 들어가는지를 정의합니다. <br>
-                CSS 는 HTML 콘텐츠에 스타일을 적용할 수 있는 스타일 규칙 언어이며, 디자인 서식을 작성합니다. <br>
-                Javascript 는 콘텐츠를 동적으로 바꾸고 멀티미디어를 제어하거나 애니메이션을 추가하는 등 거의 모든 것을 만들 수 있는 스크립팅 언어 입니다. <br>
-                이 3가지 기술을 서로 유기적으로 결합되어 있습니다. HTML 가 정적인 레이아웃을 표현한다면, 자바스크립트는 표현한다고 말할 수 있습니다. <br>
-                자바스크립트를 다루기 위해서는 기초적인 특징과 기본 문법을 알아야 합니다.
+                변수는 <i>'함수 블록 { }'을 기준</i>으로, <i>변수의 선언 위치에 따라</i> '지역 변수'와 '전역 변수'로 나뉩니다. <br>
             </p>
 
             <hr>
 
-            <h3 class="t_tit2">자바스크립트란?</h3>
+            <h3 class="t_tit2">01. 지역 변수</h3>
             <p class="t_desc">
-                자바스크립트는 웹 페이지에서 복잡한 기능을 구현할 수 있도록 하는 스크립팅 <i>프로그래밍 언어</i>를 말합니다.
+                지역 변수는 <i>하나의 지역 내에서만 사용</i>할 수 있는 변수를 뜻하며,
+                여기서 지역이란 '함수 블록 { }'에 의해 만들어지는 영역을 말합니다.
+            </p>
+            <div class="t_box">
+                function 함수 ( ) <i>&nbsp;{&nbsp;</i> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; <i>var</i> 변수 ;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                // { } 안에서 var로 지역함수 선언<br>
+                <i>&nbsp;}&nbsp;</i>
+            </div>
+            <p class="t_desc2">
+                지역 변수의 변수 선언은 함수 블록 { } 안에서 이루어집니다. <br>
+                함수의 지역 변수는 함수 블록 { } 안에서만 사용할 수 있습니다. <br>
+                지역 변수는 함수가 실행되면 만들어지고 함수가 종료되면 소멸합니다. <br>
+                함수의 외부에서는 지역 변수에 접근할 수 없습니다. <br>
+                지역 변수는 함수 블록 { } 밖의 함수와는 다른, 별도의 변수가 됩니다. <br>
+            </p>
+            <div class="script">
+<pre><code class="language-js">{
+    var x = 100;             //변수 x에 숫자 100을 저장함
+    var y = 200;             //변수 y에 숫자 200을 저장함
+    var z = "javascript"    //변수 z에 문자열 "javascript"를 저장함
+
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+</code></pre>
+            </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample01_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+            <!-- //01. 지역변수 설명 -->
+
+            <hr>
+
+            <h3 class="t_tit2">02. 전역 변수</h3>
+            <p class="t_desc">
+                전역 변수는 <i>모든 영역(지역)에서 사용</i>할 수 있는 변수를 뜻하며,
+                '함수 블록 { }' 내외에서 자유롭게 사용 가능합니다.
+            </p>
+            <div class="t_box">
+                <i> var 변수; </i>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                // { } 밖에서 전역 변수 선언 <br>
+                function 함수 ( ) <i>&nbsp;{&nbsp;</i> <br>
+                <i>&nbsp;}&nbsp;</i>
+            </div>
+            <p class="t_desc2">
+                전역 변수의 변수 선언은 함수 블록 { } 밖에서 이루어집니다. <br>
+                전역 변수는 함수 블록 { } 내외에서 모두 사용할 수 있습니다. <br>
+                전역 변수는 웹 페이지가 닫혀야 사라집니다. <br>
+                전역 변수는 프로그램의 어느 영역에서든 접근할 수 있습니다. <br>
+            </p>
+            <!-- //02. 전역변수 설명 -->
+
+            <hr>
+
+            <h3 class="t_tit2">변수의 scope</h3>
+            <p class="t_desc">
+                블록 { }에 의해 변수의 범위가 달라지는 것을 말합니다.
             </p>
             <p class="t_desc2">
-                자바스크립트는 1995년 넷스케이프 커뮤니케이션의 브렌던 아이크가 개발하였스며 Netscape Navigsator2.0에 구현되었습니다. <br>
-                1996년에는 마이크로소프트사의 Internet Explorer3.0 탑재되었으며 java 애플릿으로 구현된 웹 브라우저의 지지부진한 보급과 맞물려 빠르게 보급되었습니다. 1997년부터 ESMAScript를 따르는 표준화 작업을 통해 현재는 모든 브라우저에서 지원됩니다.
+                전역 변수는 블록 { } 내외에서 모두 사용 가능하기에 
+                자칫 동일한 이름으로 덮어 써질 수 있는 문제점이 있습니다. <br>
+                따라서 전역 변수 보다 지역 변수가 더 안전합니다.
             </p>
-            <h3 class="t_tit2">자바스크립트 기본 규칙</h3>
+
+            <!-- //변수의 scope -->
+
+
+
+
+
+
+
+            <h3 class="t_tit2">수</h3>
             <h4 class="t_tit3">01. 세미콜론(;)</h4>
             <p class="t_desc">
                 하나의 실행문이 끝나면 마지막에 세미콜론(;)을 붙여 줍니다. 
                 세미콜론(;)을 붙여 주지 않아도 상관은 없습니다.
             </p>
-            <div class="t_box">
-                var num = 5<i>;</i> <br>
-                document.write()
-            </div>
+            
             <h4 class="t_tit3">02. 대소문자</h4>
             <p class="t_desc">
                 자바스크립트는 명령어는 <i>대소문자</i>를 구별합니다.

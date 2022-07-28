@@ -28,12 +28,13 @@
                 <li><a href="javascript11.html">이벤트 객체</a></li>
             </ul>
             <ul class="study">
-                <li><a href="study/basic.html">기본 규칙</a></li>
-                <li><a href="study/operator.html">연산자</a></li>
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
                 <li><a href="for.html">반복문</a></li>
                 <li><a href="if.html">조건문</a></li>
                 <li><a href="type.html">데이터 타입</a></li>
-                <li><a href="layout.html">레이아웃</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수 / 전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -90,7 +91,7 @@
         // (제어문 : 조건문, 반복문, 중지, 건너뛰기)
         // 01. if 문  (조건문) 참인지 거짓인지 판단할 수 있다.    /* if 만약에 ~ 하면 */
         {
-            if(0){     //숫자와 부등호 또는 true, 1, "0", "1", 0<10, [0,1](배열), {a:100}(객체) -> true 나옴 .. false, 0, undefined, null -> false 나옴 ... 도 들어갈 수 있다.
+            if(0){     //숫자와 부등호 또는 true, 1, "0", "1", 0<10, [0,1](배열), {a:100}(객체) -> true 나옴 .. false, 0, undefined, null, "" / ->"(문자열에 아무것도 안 쓴 것)" / -> false 나옴 ... 도 들어갈 수 있다.
                 document.write("실행되었습니다.(true)");
             } else {
                 document.write("실행되었습니다.(false)");
@@ -169,7 +170,7 @@
 
         document.write("<br>");
 
-        // 06. switch문
+        // 06. switch문    다중 if 문과 같다고 보면 되는데 case 옆으로 값이 정해져 있다는 차이점
         {
             const num =100;
 
@@ -248,6 +249,40 @@
                 }
             }
         }
+
+        // 11. break문
+        // while문을 이용해서 1~20까지 출력
+        {
+            let num = 1;
+            while( num <= 20 ){
+                document.write(num);       //0을 넣으면 false가 뜨고 1을 넣으면 무한루프에 빠짐 (단점)
+                num++;
+            }
+        }
+
+        document.write("<br>");
+
+        // for문을 이용해서 1~20까지 출력
+        for( let i=1; i<=20; i++){
+            document.write(i);
+            if( i == 10 ){     // = 가 하나 들어가면 대입  == 같다 비교값 : 겉모습만 확인 === 스트링인지, 문자인지 함수값인지 등등 : 유전자(성질)까지 확인
+                break;   // 10까지 출력하고 종료
+            }
+
+                // continue; // 10번은 생략하고 넘어감
+        }
+
+        document.write("<br>");
+
+        // 12. continue문
+        for( let i=1; i<=20; i++){
+            document.write(i);
+            if( i == 10 ){
+                continue; // 10번은 생략하고 넘어감
+            }
+
+        }
+        
     </script>
 </body>
 </html>
